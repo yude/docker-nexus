@@ -2,12 +2,9 @@ version: "2"
 
 services:
   nexus:
-    image: sonatype/nexus
+    image: yude/nexus
+    build: .
     volumes:
-      - "nexus-data:/sonatype-work"
+      - "./data:/sonatype-work"
     ports:
       - "8081:8081"
-  
-volumes:
-  nexus-data: {}
-
